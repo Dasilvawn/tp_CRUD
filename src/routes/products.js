@@ -8,7 +8,7 @@ const productsController = require('../controllers/productsController');
 // viene del entrypoint /products
 
 /*** GET ALL PRODUCTS ***/ 
-router.get('/', productsController.index); 
+router.get('/', productsController.index); //este index es del producController NO del main.js o index.ejs
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create', productsController.create); 
@@ -24,7 +24,7 @@ router.put('/update/:id', productsController.update);
 
 
 /*** DELETE ONE PRODUCT***/ 
-router.delete('/:id', productsController.destroy); 
+router.delete('/delete/:id', productsController.destroy); 
 
 
 module.exports = router;
